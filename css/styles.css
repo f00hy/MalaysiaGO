@@ -1,0 +1,304 @@
+/* Navbar Styling */
+.navbar {
+    background: rgba(255, 255, 255, 0); /* Start with a fully transparent background */
+    transition: background 0.3s ease, color 0.3s ease;
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Default hover state for the navbar */
+.navbar:hover {
+    background: rgba(255, 255, 255, 0.9); /* White background on hover */
+}
+
+/* Change navbar text color after scrolling past the video */
+.navbar.scrolled-past-video {
+    background: rgba(255, 255, 255, 0.9); /* Light white background after scrolling */
+}
+
+.navbar.scrolled-past-video .navbar-nav .nav-link,
+.navbar.scrolled-past-video .navbar-brand .ms-2 {
+    color: #000000; /* Black text color */
+}
+
+/* Maintain hover background even after scrolling past the video */
+.navbar.scrolled-past-video:hover {
+    background: rgba(255, 255, 255, 0.9); /* Ensure background remains on hover */
+}
+
+/* Default Navbar Text Styling */
+.navbar-brand .ms-2 {
+    color: #ffffff; /* Default color: white */
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff; /* White text by default */
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+/* Change navbar text color to black when scrolled past video */
+.navbar.scrolled-past-video .navbar-dark .navbar-nav .nav-link {
+    color: #000000; /* Black text color */
+}
+
+/* Hover state for text */
+.navbar:hover .navbar-brand .ms-2 {
+    color: #000000; /* Hover color: black */
+}
+
+.navbar:hover .navbar-nav .nav-link {
+    color: #000000;
+}
+
+
+
+
+/* Neighbourhoods Section Image Styling */
+#neighbourhoodsCarousel .carousel-inner img {
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Style the carousel control buttons */
+#neighbourhoodsCarousel .carousel-control-prev,
+#neighbourhoodsCarousel .carousel-control-next {
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    top: 40%; /* Position higher relative to the carousel height */
+    transform: translateY(-50%); /* Adjust for centering */
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 50%; /* Make them circular */
+    border: 1px solid #ccc; /* Optional: Add a subtle border */
+    display: flex; /* Flexbox to center the arrow inside */
+    justify-content: center;
+    align-items: center;
+    z-index: 5; /* Ensure they are above the carousel content */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+#neighbourhoodsCarousel .carousel-control-prev:hover,
+#neighbourhoodsCarousel .carousel-control-next:hover {
+    background-color: #007bff; /* Change background color on hover */
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge on hover */
+}
+
+#neighbourhoodsCarousel .carousel-control-prev-icon,
+#neighbourhoodsCarousel .carousel-control-next-icon {
+    background-image: none; /* Remove default arrow */
+    border: solid #000; /* Black arrow color */
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+#neighbourhoodsCarousel .carousel-control-prev-icon {
+    transform: rotate(135deg); /* Create the left arrow */
+}
+
+#neighbourhoodsCarousel .carousel-control-next-icon {
+    transform: rotate(-45deg); /* Create the right arrow */
+}
+
+/* Position the previous button slightly left of the carousel */
+#neighbourhoodsCarousel .carousel-control-prev {
+    left: -20px; /* Adjust to move the button slightly outside the carousel */
+}
+
+/* Position the next button slightly right of the carousel */
+#neighbourhoodsCarousel .carousel-control-next {
+    right: -20px; /* Adjust to move the button slightly outside the carousel */
+}
+
+/* Pretty Carousel Indicators Styling */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between the indicators */
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.5); /* Default background */
+    border-radius: 50%;
+    border: none;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.carousel-indicators .active {
+    width: 16px; /* Slightly larger when active */
+    background-color: #007bff; /* Active indicator color */
+}
+
+/* Button Styling */
+.view-all-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: transparent; /* Start with a transparent background */
+    border: 2px solid #007bff; /* Blue border */
+    color: #007bff; /* Blue text color */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.view-all-btn:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: #fff; /* White text on hover */
+    border-color: #007bff; /* Ensure border remains blue */
+}
+
+/* Primary Button Styling */
+.btn-primary {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: transparent; /* Start with a transparent background */
+    border: 2px solid #007bff; /* Blue border */
+    color: #007bff; /* Blue text color */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-top: 15px; /* To maintain consistent spacing with mt-3 */
+}
+
+/* Primary Button Hover Effect */
+.btn-primary:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: #fff; /* White text on hover */
+    border-color: #007bff; /* Ensure border remains blue */
+}
+
+/* Center the view all button */
+.text-center .view-all-btn {
+    display: inline-block;
+}
+
+/* Heading and text styles */
+h2 {
+    font-weight: 700;
+    margin-bottom: 40px;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    opacity: 1; /* Ensure the title is visible */
+    transform: translateY(0); /* No unwanted vertical shift */
+}
+
+/* Connect with Us icons */
+.list-inline-item a {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.list-inline-item a:hover {
+    color: #f0f0f0;
+}
+
+.list-inline-item i {
+    margin: 0 10px;
+}
+
+/* Carousel Images */
+.carousel-inner img {
+    height: 450px;
+    object-fit: cover;
+}
+
+/* Ensure all cards in the "Things You Must Do" section have the same height and padding */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 15px;
+    }
+    
+    .card img {
+        height: auto;
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Add these classes to apply animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-in-out;
+}
