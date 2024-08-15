@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Container Fix */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Featured Places Card Styles */
+.fixed-size-card {
+    width: 100%;
+    max-width: 100%;
+    height: 350px; /* Fixed height for uniformity */
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #007bff; /* Bigger border */
+    overflow: hidden; /* Ensure no overflow */
+    position: relative; /* Position relative to handle absolute positioning */
+}
+
+.fixed-size-card .card-img-top {
+    object-fit: cover; /* Ensure the image covers the card */
+    height: 200px; /* Fixed height for the image */
+}
+
+.fixed-size-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem; /* Adjust padding as needed */
+}
+
+.fixed-size-card .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+}
+
+.fixed-size-card .card-text {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.fixed-size-card .btn {
+    margin-top: auto; /* Push button to the bottom */
+}
+
+/* Places Section */
+.places-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.places-section .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery Section */
+.gallery-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+}
+
+.gallery-scroll {
+    display: inline-flex;
+    animation: scrollLeft 30s linear infinite; /* Slow auto-scroll */
+    padding: 0; /* Remove any spacing between images */
+    margin: 0; /* Ensure no gaps */
+}
+
+.gallery-image {
+    display: inline-block;
+    width: 200px; /* Fixed width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 0; /* No margin between images */
+    border: 5px solid #007bff; /* Bigger border */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-image {
+        width: 150px; /* Adjust width for mobile */
+    }
+}
+
+/* Contact Section */
+#contact .form-control {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    padding: 1rem;
+}
+
+#contact .form-control:focus {
+    background-color: #444;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+#contact button {
+    background-color: #007bff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #0056b3;
+}
+
+/* Adjusting the Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#heroVideo {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: brightness(50%); /* Slightly darken the video for better text contrast */
+}
+
+.hero-content {
+    color: rgba(255, 255, 255, 0.9); /* Make the text slightly transparent */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a shadow to make text more readable */
+    z-index: 2;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4); /* Add a subtle background to the text */
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem; /* Adjust the font size for better visibility */
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    font-size: 1.25rem;
+    padding: 10px 20px;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+footer {
+    background-color: #343a40; /* Same as your footer's background color */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+blockquote footer {
+    background-color: transparent; /* Ensure no background color is applied */
+    color: #000; /* Set the text color to black or adjust as needed */
+}
+
+blockquote footer cite {
+    background-color: transparent; /* Ensure no background color is applied to the cite element */
+    color: #000; /* Set the text color to black or adjust as needed */
+}
