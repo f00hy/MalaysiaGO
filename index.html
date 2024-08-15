@@ -7,81 +7,101 @@
     <meta name="author" content="Beh Jun Yue, Foo Yao Heng, Lee Shao Yuan, Yong Kai Wen" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Google Font Roboto-->
+    <!-- Google Font Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    
+    <!-- CSS Files -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow.js/1.1.2/wow.min.js"></script> <!-- Include WOW.js -->
-    <script src="js/main.js" defer></script> <!-- Link to your JavaScript file -->
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow.js/1.1.2/wow.min.js"></script>
 
     <title>MalaysiaGO</title>
 </head>
 <body>
 
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="/assets/icons/logo.png" alt="MalaysiaGO Logo" style="height: 30px; width: auto;" class="navbar-logo">
-
-
-          <span class="ms-2">Visit Malaysia</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href="#">What's Happening</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Neighbourhoods</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Things To Do</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Travel Tips</a>
-              </li>
-          </ul>
-      </div>
-  </div>
-  </nav>
-
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-visible animate__animated animate__slideInDown">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/assets/icons/logo.png" alt="MalaysiaGO Logo" style="height: 30px; width: auto;" class="navbar-logo">
+                <span class="ms-2">Visit Malaysia</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">What's Happening</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Neighbourhoods</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Things To Do</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Travel Tips</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Video Header Section -->
     <header class="video-background">
-        <div class="overlay"></div>
-        <video width="100%"  autoplay muted loop>
-            <source src="video\video.mp4" type="video/mp4">
+        
+        <video width="100%" autoplay muted loop>
+            <source src="video/video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="video-content text-center">
-            <h1>Malaysia: Truly Asia</h1>
-            <p>Experience the vibrant culture and rich heritage of Malaysia.</p>
-        </div>
     </header>
+
+    
 
     <!-- Heritage Section -->
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <img src="image1.jpg" class="img-fluid" alt="Heritage">
-                </div>
-                <div class="col-md-6">
+                <!-- Text Section -->
+                <div class="col-lg-6 d-flex flex-column justify-content-center animate__animated animate__fadeInLeft">
                     <h2>Heritage. Made in Malaysia.</h2>
-                    <p>Whether you're hunting for mouthwatering food, historic landmarks, or unique architecture, explore the diverse cultures and rich heritage of Malaysia and create your own adventures.</p>
-                    <a href="#" class="btn btn-primary">Discover Top Cultural Experiences</a>
+                    <p>
+                        Whether you're hunting for mouthwatering food, stories, or architecture, explore the vibrant cultures and rich heritage of Malaysia and create your own adventures.
+                    </p>
+                    <a href="#" class="btn btn-primary mt-3">Discover Top Cultural Experiences →</a>
+                </div>
+                <!-- Carousel Section -->
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <div id="heritageCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/image1.jpeg" class="d-block w-100" alt="Heritage Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/image2.jpeg" class="d-block w-100" alt="Heritage Image 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/image3.webp" class="d-block w-100" alt="Heritage Image 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#heritageCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#heritageCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,12 +110,12 @@
     <!-- Things You Must Do Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="mb-4">Things You Must Do</h2>
+            <h2 class="mb-4 animate__animated animate__fadeInUp">Things You Must Do</h2>
             <div class="row">
                 <!-- Card 1 -->
-                <div class="col-md-4" data-aos="zoom-in">
+                <div class="col-md-4 animate__animated animate__zoomIn">
                     <div class="card">
-                        <img src="penang-food.jpg" class="card-img-top" alt="Penang Food">
+                        <img src="images/penang-food.webp" class="card-img-top" alt="Penang Food">
                         <div class="card-body">
                             <h5 class="card-title">Penang Street Food</h5>
                             <p class="card-text">Explore the vibrant street food scene in Penang, where every bite is a burst of flavor.</p>
@@ -103,9 +123,9 @@
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="col-md-4" data-aos="zoom-in">
+                <div class="col-md-4 animate__animated animate__zoomIn" style="animation-delay: 0.2s;">
                     <div class="card">
-                        <img src="camron-highlands.jpg" class="card-img-top" alt="Cameron Highlands">
+                        <img src="images/cameron-highlands.jpg" class="card-img-top" alt="Cameron Highlands">
                         <div class="card-body">
                             <h5 class="card-title">Cameron Highlands</h5>
                             <p class="card-text">Escape to the cool, refreshing climate of Cameron Highlands and explore tea plantations and strawberry farms.</p>
@@ -113,9 +133,9 @@
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="col-md-4" data-aos="zoom-in">
+                <div class="col-md-4 animate__animated animate__zoomIn" style="animation-delay: 0.4s;">
                     <div class="card">
-                        <img src="batu-caves.jpg" class="card-img-top" alt="Batu Caves">
+                        <img src="images/batu-caves.jpg" class="card-img-top" alt="Batu Caves">
                         <div class="card-body">
                             <h5 class="card-title">Batu Caves</h5>
                             <p class="card-text">Visit the iconic Batu Caves, a limestone hill with a series of caves and cave temples in Gombak.</p>
@@ -129,15 +149,15 @@
     <!-- What's Happening Section -->
     <section class="py-5">
         <div class="container">
-            <h2 class="mb-4">What's Happening</h2>
+            <h2 class="mb-4 animate__animated animate__fadeInUp">What's Happening</h2>
             <div class="row">
-                <div class="col-md-8">
-                    <img src="malaysia-gp.jpg" class="img-fluid" alt="Malaysia Grand Prix">
+                <div class="col-md-8 animate__animated animate__fadeInLeft">
+                    <img src="images/malaysia-gp.jpg" class="img-fluid" alt="Malaysia Grand Prix">
                     <h3 class="mt-3">Malaysia Grand Prix</h3>
                     <p>Experience the thrill of the Malaysia Grand Prix, where high-speed racing meets vibrant cultural festivities.</p>
-                    <a href="#" class="btn btn-primary">Find Out More</a>
+                    <a href="#" class="btn btn-primary view-all-btn">View All</a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 animate__animated animate__fadeInRight">
                     <ul class="list-group">
                         <li class="list-group-item">01 Sep '24 - Merdeka Day Celebrations</li>
                         <li class="list-group-item">15 Oct '24 - Malaysia Food Festival</li>
@@ -149,78 +169,82 @@
         </div>
     </section>
 
-    <!-- Neighbourhoods Section -->
     <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="mb-4">Vibrant Neighbourhoods and Attractions to Explore</h2>
-            <div id="neighbourhoodsCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-aos="fade-up">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="george-town.jpg" class="d-block w-100" alt="George Town">
-                                <h5 class="mt-2">George Town, Penang</h5>
-                                <p>Discover the UNESCO World Heritage Site of George Town, known for its unique architectural and cultural townscape.</p>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="melaka.jpg" class="d-block w-100" alt="Melaka">
-                                <h5 class="mt-2">Melaka</h5>
-                                <p>Explore the historic city of Melaka, where colonial history meets vibrant cultural traditions.</p>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="bukit-bintang.jpg" class="d-block w-100" alt="Bukit Bintang">
-                                <h5 class="mt-2">Bukit Bintang, Kuala Lumpur</h5>
-                                <p>Experience the bustling nightlife, shopping, and entertainment in the heart of Kuala Lumpur's Bukit Bintang.</p>
-                            </div>
+    <div class="container">
+        <h2 class="mb-4">Vibrant Neighbourhoods and Attractions to Explore</h2>
+        <div id="neighbourhoodsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="images/george-town.jpg" class="d-block w-100" alt="George Town">
+                            <h5 class="mt-2">George Town, Penang</h5>
+                            <p>Discover the UNESCO World Heritage Site of George Town, known for its unique architectural and cultural townscape.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="images/melaka.jpg" class="d-block w-100" alt="Melaka">
+                            <h5 class="mt-2">Melaka</h5>
+                            <p>Explore the historic city of Melaka, where colonial history meets vibrant cultural traditions.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="images/bukit-bintang.jpg" class="d-block w-100" alt="Bukit Bintang">
+                            <h5 class="mt-2">Bukit Bintang, Kuala Lumpur</h5>
+                            <p>Experience the bustling nightlife, shopping, and entertainment in the heart of Kuala Lumpur's Bukit Bintang.</p>
                         </div>
                     </div>
-                    <!-- Add more carousel items as needed -->
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#neighbourhoodsCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#neighbourhoodsCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <!-- Additional carousel items as needed -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#neighbourhoodsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#neighbourhoodsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-center animate__animated animate__fadeIn">
+            <p>&copy; 2024 Malaysia Tourism Board. All rights reserved.</p>
+            <p>Last updated on August 14, 2024</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#" class="text-white">Terms of Use</a></li>
+            </ul>
+            <!-- Connect with Us Section -->
+            <div class="mt-4">
+                <h5>Connect with Us</h5>
+                <div class="d-flex justify-content-center">
+                    <a href="https://facebook.com" target="_blank" class="btn btn-outline-light me-2" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="btn btn-outline-light me-2" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="btn btn-outline-light me-2" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="btn btn-outline-light" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </section>
-
- <!-- Footer -->
-<footer class="py-4 bg-dark text-white">
-  <div class="container text-center">
-      <p>&copy; 2024 Malaysia Tourism Board. All rights reserved.</p>
-      <p>Last updated on August 14, 2024</p>
-      <ul class="list-inline">
-          <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
-          <li class="list-inline-item"><a href="#" class="text-white">Terms of Use</a></li>
-      </ul>
-      <!-- Connect with Us Section -->
-      <div class="mt-4">
-          <h5>Connect with Us</h5>
-          <div class="d-flex justify-content-center">
-              <a href="https://facebook.com" target="_blank" class="btn btn-outline-light me-2" aria-label="Facebook">
-                  <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="https://twitter.com" target="_blank" class="btn btn-outline-light me-2" aria-label="Twitter">
-                  <i class="fab fa-twitter"></i>
-              </a>
-              <a href="https://instagram.com" target="_blank" class="btn btn-outline-light me-2" aria-label="Instagram">
-                  <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://linkedin.com" target="_blank" class="btn btn-outline-light" aria-label="LinkedIn">
-                  <i class="fab fa-linkedin-in"></i>
-              </a>
-          </div>
-      </div>
-  </div>
-</footer>
-
+    </footer>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Initialize WOW.js -->
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>
