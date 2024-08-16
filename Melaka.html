@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Melaka - Tourism Paradise</title>
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="style/template.css">
+    <!-- Additional CSS for animations and icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <!-- Header -->
+        <div id="header-placeholder"></div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Hero Section with Video Background -->
+            <section id="hero" class="hero text-center d-flex align-items-center justify-content-center">
+                <video autoplay muted loop id="heroVideo" class="w-100">
+                    <source src="video/melaka.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hero-content text-black position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                    <a href="#places" class="btn btn-primary btn-lg">Explore Now</a>
+                </div>
+            </section>
+
+            <!-- About Melaka Section -->
+            <section id="about" class="about-section py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-4">About Melaka</h2>
+                    <p>Melaka is a historical state located in southern Malaysia, renowned for its rich heritage, diverse culture, and architectural marvels. The state offers a captivating blend of historical sites, modern attractions, and vibrant street life, making it an ideal destination for history buffs and leisure travelers alike.</p>
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"Melaka is a historical gem in Malaysia, where the past and present intertwine to create a unique cultural experience."</p>
+                        <br><footer class="blockquote-footer">Travel Writer <cite title="Source Title">Jane Smith</cite></footer><br>
+                    </blockquote>
+                    <p>From the historic Jonker Street to the beautiful A Famosa fortress, Melaka is a city brimming with stories and cultural heritage. With its strategic location by the Straits of Malacca, Melaka has been a melting pot of cultures and influences throughout history.</p>
+                </div>
+            </section>
+
+           <!-- Featured Places Section -->
+           <section id="places" class="places-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Featured Tourism Places</h2>
+                <div class="row g-4">
+                    <!-- Place 1: A Famosa Fort -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card place fixed-size-card">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/0b/56/bf/varie.jpg?w=1200&h=-1&s=1" class="card-img-top" alt="A Famosa Fort">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">A Famosa Fort</h5>
+                                <p class="card-text">Explore A Famosa Fort, a historical fortress built by the Portuguese in the 16th century. It stands as a testament to Melaka's colonial past and offers insight into the region's history.</p>
+                                <a href="https://www.tripadvisor.com.my/Attraction_Review-g306997-d455168-Reviews-A_Famosa_Fort-Melaka_Central_Melaka_District_Melaka_State.html" class="btn btn-primary mt-auto" target="_blank">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Place 2: Jonker Street -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card place fixed-size-card">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/43/21/a1/the-jonker-street-night.jpg?w=1200&h=-1&s=1" class="card-img-top" alt="Jonker Street">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Jonker Street</h5>
+                                <p class="card-text">Stroll through Jonker Street, the heart of Melaka’s Chinatown. Known for its vibrant night market, antique shops, and delicious local street food, it’s a must-visit for an authentic cultural experience.</p>
+                                <a href="https://www.tripadvisor.com.my/Attraction_Review-g306997-d456610-Reviews-Jonker_Street-Melaka_Central_Melaka_District_Melaka_State.html" class="btn btn-primary mt-auto" target="_blank">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Place 3: Christ Church Melaka -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card place fixed-size-card">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/20/e0/a8/christ-kelaka.jpg?w=800&h=-1&s=1" class="card-img-top" alt="Christ Church Melaka">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Christ Church Melaka</h5>
+                                <p class="card-text">Visit Christ Church Melaka, an iconic red-brick church built by the Dutch in the 18th century. Its historical and architectural significance makes it a key landmark in Melaka.</p>
+                                <a href="https://www.tripadvisor.com.my/Attraction_Review-g306997-d456608-Reviews-Christ_Church-Melaka_Central_Melaka_District_Melaka_State.html" class="btn btn-primary mt-auto" target="_blank">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Place 4: Melaka Sultanate Palace Museum -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card place fixed-size-card">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/23/0b/2d/malacca-malaysia-sultanate.jpg?w=900&h=-1&s=1" class="card-img-top" alt="Melaka Sultanate Palace Museum">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Melaka Sultanate Palace Museum</h5>
+                                <p class="card-text">Explore the Melaka Sultanate Palace Museum, a replica of the 15th-century palace of the Melaka Sultanate. It houses exhibits on the Sultanate's history, culture, and artifacts.</p>
+                                <a href="https://www.tripadvisor.com.my/Attraction_Review-g306997-d451317-Reviews-Malacca_Sultanate_Palace-Melaka_Central_Melaka_District_Melaka_State.html" class="btn btn-primary mt-auto" target="_blank">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Place 5: St. Paul's Hill -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card place fixed-size-card">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/79/c7/b6/20190510-160439-largejpg.jpg?w=1000&h=-1&s=1" class="card-img-top" alt="St. Paul's Hill">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">St. Paul's Hill</h5>
+                                <p class="card-text">Climb St. Paul's Hill for a panoramic view of Melaka. The hill features the ruins of St. Paul's Church and a historic lighthouse, offering a glimpse into Melaka's colonial past.</p>
+                                <a href="https://www.tripadvisor.com.my/Attraction_Review-g306997-d455355-Reviews-St_Paul_s_Hill_Church_Bukit_St_Paul-Melaka_Central_Melaka_District_Melaka_State.html" class="btn btn-primary mt-auto" target="_blank">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Place 6: Melaka River Cruise -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card place fixed-size-card">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/f5/98/33/caption.jpg?w=1200&h=-1&s=1" class="card-img-top" alt="Melaka River Cruise">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Melaka River Cruise</h5>
+                                <p class="card-text">Enjoy a relaxing Melaka River Cruise, offering scenic views of the city’s historic buildings and vibrant street art. It's a unique way to explore Melaka from the water.</p>
+                                <a href="https://www.tripadvisor.com.my/Attraction_Review-g306997-d1898121-Reviews-Melaka_River_Cruise-Melaka_Central_Melaka_District_Melaka_State.html" class="btn btn-primary mt-auto" target="_blank">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+            <!-- Gallery Section -->
+            <section id="gallery" class="gallery-section py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-5">Explore Melaka through Pictures</h2>
+                    <div class="gallery-container">
+                        <div class="gallery-scroll">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/0b/56/bf/varie.jpg?w=1200&h=-1&s=1" class="img-fluid gallery-image" alt="A Famosa Fort">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/43/21/a1/the-jonker-street-night.jpg?w=1200&h=-1&s=1" class="img-fluid gallery-image" alt="Jonker Street">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/20/e0/a8/christ-kelaka.jpg?w=800&h=-1&s=1" class="img-fluid gallery-image" alt="Christ Church Melaka">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/23/0b/2d/malacca-malaysia-sultanate.jpg?w=900&h=-1&s=1" class="img-fluid gallery-image" alt="Melaka Sultanate Palace Museum">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/79/c7/b6/20190510-160439-largejpg.jpg?w=1000&h=-1&s=1" class="img-fluid gallery-image" alt="St. Paul's Hill">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/f5/98/33/caption.jpg?w=1200&h=-1&s=1" class="img-fluid gallery-image" alt="Melaka River Cruise">
+                            <!-- Duplicate images to ensure infinite scrolling without gaps -->
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/0b/56/bf/varie.jpg?w=1200&h=-1&s=1" class="img-fluid gallery-image" alt="A Famosa Fort">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/43/21/a1/the-jonker-street-night.jpg?w=1200&h=-1&s=1" class="img-fluid gallery-image" alt="Jonker Street">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/20/e0/a8/christ-kelaka.jpg?w=800&h=-1&s=1" class="img-fluid gallery-image" alt="Christ Church Melaka">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/23/0b/2d/malacca-malaysia-sultanate.jpg?w=900&h=-1&s=1" class="img-fluid gallery-image" alt="Melaka Sultanate Palace Museum">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/79/c7/b6/20190510-160439-largejpg.jpg?w=1000&h=-1&s=1" class="img-fluid gallery-image" alt="St. Paul's Hill">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/f5/98/33/caption.jpg?w=1200&h=-1&s=1" class="img-fluid gallery-image" alt="Melaka River Cruise">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Footer -->
+        <div id="footer-placeholder"></div>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+
+</html>
