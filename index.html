@@ -29,39 +29,8 @@
 </head>
 <body>
 
-   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-visible">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="/assets/icons/logo.png" alt="MalaysiaGO Logo" style="height: 30px; width: auto;" class="navbar-logo">
-            <span class="ms-2">Visit Malaysia</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">What's Happening</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Neighbourhoods</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Things To Do</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Travel Tips</a>
-                </li>
-                <!-- Login Button -->
-                <li class="nav-item">
-                    <a class="btn btn-outline-light ms-2 btn-login" href="#" role="button">Login</a>
-
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+   <!-- Header Placeholder -->
+   <div id="header-placeholder"></div>
 
 
     <!-- Video Header Section -->
@@ -219,7 +188,7 @@
     <!-- Footer -->
     <footer class="py-4 bg-dark text-white">
         <div class="container text-center animate__animated animate__fadeIn">
-            <p>&copy; 2024 Malaysia Tourism Board. All rights reserved.</p>
+            <p>&copy; 2024 MalaysiaGO. All rights reserved.</p>
             <p>Last updated on August 14, 2024</p>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
@@ -252,6 +221,9 @@
 
     <!-- Initialize WOW.js -->
     <script>
+        $(function(){
+            $("#header-placeholder").load("header.html");
+        });
         new WOW().init();
     </script>
 </body>
