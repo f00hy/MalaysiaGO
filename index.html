@@ -34,10 +34,10 @@
 
 
     <!-- Video Header Section -->
-    <header class="video-background">
+    <header class="video-background" id="hero">
         
         <video width="100%" autoplay muted loop>
-            <source src="video/video.mp4" type="video/mp4">
+            <source src="video/malaysia.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </header>
@@ -186,45 +186,13 @@
 
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark text-white">
-        <div class="container text-center animate__animated animate__fadeIn">
-            <p>&copy; 2024 MalaysiaGO. All rights reserved.</p>
-            <p>Last updated on August 14, 2024</p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
-                <li class="list-inline-item"><a href="#" class="text-white">Terms of Use</a></li>
-            </ul>
-            <!-- Connect with Us Section -->
-            <div class="mt-4">
-                <h5>Connect with Us</h5>
-                <div class="d-flex justify-content-center">
-                    <a href="https://facebook.com" target="_blank" class="btn btn-outline-light me-2" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://twitter.com" target="_blank" class="btn btn-outline-light me-2" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://instagram.com" target="_blank" class="btn btn-outline-light me-2" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" class="btn btn-outline-light" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
-    <!-- Bootstrap JS and dependencies -->
+    <!-- JavaScript files included here -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- Initialize WOW.js -->
-    <script>
-        $(function(){
-            $("#header-placeholder").load("header.html");
-        });
-        new WOW().init();
-    </script>
+    
 </body>
 </html>
