@@ -9,14 +9,16 @@
     left: 0;
 }
 
-/* Default hover state for the navbar */
-.navbar:hover {
-    background: rgba(255, 255, 255, 0.9); /* White background on hover */
+
+/* Solid background when hovered */
+.navbar:hover,
+.navbar.dropdown-active {
+    background: #ffffff; /* Solid white background on hover */
 }
 
-/* Change navbar text color after scrolling past the video */
+/* Solid background after scrolling past the video */
 .navbar.scrolled-past-video {
-    background: rgba(255, 255, 255, 0.9); /* Light white background after scrolling */
+    background: #ffffff; /* Solid white background after scrolling */
 }
 
 .navbar.scrolled-past-video .navbar-nav .nav-link,
@@ -24,9 +26,9 @@
     color: #000000; /* Black text color */
 }
 
-/* Maintain hover background even after scrolling past the video */
+/* Maintain solid background even after scrolling past the video and hovering */
 .navbar.scrolled-past-video:hover {
-    background: rgba(255, 255, 255, 0.9); /* Ensure background remains on hover */
+    background: #ffffff; /* Ensure background remains solid white on hover */
 }
 
 /* Default Navbar Text Styling */
@@ -51,16 +53,102 @@
 }
 
 /* Hover state for text */
-.navbar:hover .navbar-brand .ms-2 {
+.navbar:hover .navbar-brand .ms-2,
+.navbar:hover .navbar-nav .nav-link {
     color: #000000; /* Hover color: black */
 }
 
-.navbar:hover .navbar-nav .nav-link {
-    color: #000000;
+/* Dropdown Menu Styling */
+.navbar-dark .navbar-nav .dropdown-menu {
+    background-color: rgba(255, 255, 255, 1); /* White background for the dropdown */
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dropdown item styling */
+.navbar-dark .navbar-nav .dropdown-menu .dropdown-item {
+    color: #000000; /* Black text color */
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 
 
+
+/* Hover state for dropdown items */
+.navbar-dark .navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light grey background on hover */
+    color: #000000; /* Ensure text remains black */
+}
+
+/* Ensure dropdown stays white when the navbar is scrolled past the video */
+.navbar.scrolled-past-video .navbar-nav .dropdown-menu {
+    background-color: rgba(255, 255, 255, 1); /* Keep background white */
+}
+
+.navbar.scrolled-past-video .navbar-nav .dropdown-menu .dropdown-item {
+    color: #000000; /* Keep text black */
+}
+
+/* Toggler Icon (Hamburger Menu) */
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Change the dropdown icon when scrolled past video */
+.navbar.scrolled-past-video .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Change the hamburger icon color to black when hovering over the navbar */
+.navbar:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Custom styles for the Login button */
+.navbar .btn-login {
+    border: 1px solid #fff; /* White border by default */
+    color: #fff; /* White text by default */
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+
+/* Hover state of the Login button when hovering over the navbar */
+.navbar:hover .btn-login {
+    border-color: #000; /* Black border color on navbar hover */
+    color: #000; /* Black text color on navbar hover */
+}
+
+/* Change the Login button when hovered */
+.navbar .btn-login:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text color on hover */
+    border-color: #000; /* Black border color on hover */
+}
+
+/* Change the Login button to black when the navbar is scrolled past the video */
+.navbar.scrolled-past-video .btn-login {
+    color: #000; /* Black text color */
+    border-color: #000; /* Black border color */
+    background-color: transparent; /* Ensure background remains transparent */
+}
+
+/* Change the Login button on hover when scrolled past video */
+.navbar.scrolled-past-video .btn-login:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text color on hover */
+    border-color: #000; /* Ensure border remains black on hover */
+}
+
+
+
+
+.navbar:not(.scrolled-past-video) .btn-login:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text color on hover */
+    border-color: #000; /* Ensure border remains black */
+}
 
 /* Neighbourhoods Section Image Styling */
 #neighbourhoodsCarousel .carousel-inner img {
@@ -144,7 +232,7 @@
 }
 
 /* Button Styling */
-.view-all-btn {
+.view-all-btn, .btn-primary {
     padding: 10px 20px;
     border-radius: 20px;
     font-weight: bold;
@@ -153,30 +241,11 @@
     border: 2px solid #007bff; /* Blue border */
     color: #007bff; /* Blue text color */
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-top: 15px; /* To maintain consistent spacing */
 }
 
 /* Button Hover Effect */
-.view-all-btn:hover {
-    background-color: #007bff; /* Blue background on hover */
-    color: #fff; /* White text on hover */
-    border-color: #007bff; /* Ensure border remains blue */
-}
-
-/* Primary Button Styling */
-.btn-primary {
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: transparent; /* Start with a transparent background */
-    border: 2px solid #007bff; /* Blue border */
-    color: #007bff; /* Blue text color */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    margin-top: 15px; /* To maintain consistent spacing with mt-3 */
-}
-
-/* Primary Button Hover Effect */
-.btn-primary:hover {
+.view-all-btn:hover, .btn-primary:hover {
     background-color: #007bff; /* Blue background on hover */
     color: #fff; /* White text on hover */
     border-color: #007bff; /* Ensure border remains blue */
@@ -255,7 +324,6 @@ h2 {
     font-weight: 400;
     color: #666;
     margin-bottom: 10px;
-    text-align: justify;
 }
 
 .card-container {
@@ -302,4 +370,11 @@ h2 {
 
 .slide-up {
     animation: slideUp 1s ease-in-out;
+}
+
+/* Ensure the button remains visible */
+.btn-login {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
 }
