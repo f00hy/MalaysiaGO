@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+
+    <!-- Browser Tab -->
+    <title>Register for MalaysiaGO</title>
+    <link rel="icon" href="assets/icons/logo.png" />
+
+    <!-- Metadata -->
+    <meta charset="utf-8" />
+    <meta name="description" content="Malaysia Travelling Website" />
+    <meta name="keywords" content="Malaysia, Travel, Adventure, Tips, Activities, Culture" />
+    <meta name="author" content="Beh Jun Yue, Foo Yao Heng, Lee Shao Yuan, Yong Kai Wen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="styles/general.css" /> -->
+    <link rel="stylesheet" href="styles/login-register.css" />
+  </head>
+
+  <body>
+
+    <!-- Login and Register Form -->
+    <div class="login-register-form">
+
+      <!-- Register Form -->
+      <div class="register-form">
+
+        <!-- Close Button -->
+        <button class="close-btn">
+          <i class="bi-x"></i>        
+        </button>
+
+        <!-- Title -->
+        <h1 class="mb-4">REGISTER</h1>
+
+        <form method="post" action="javascript:void(0);" autocomplete="on" novalidate>
+
+          <!-- Username Input -->
+          <div class="input-text-box mb-4">
+            <input type="text" id="username" required />
+            <label for="username">Username</label>
+            <i class="bi-person-fill"></i>
+            <small class="invalid-msg">
+              Must be 5 - 12 alphabetic characters.
+            </small>
+          </div>
+
+          <!-- Email Input -->
+          <div class="input-text-box mb-4">
+            <input type="text" id="email" required />
+            <label for="email">Email</label>
+            <i class="bi-envelope-fill"></i>
+            <small class="invalid-msg">
+              Must be valid format: example@domain.com.
+            </small>
+          </div>
+
+          <!-- Password Input -->
+          <div class="input-text-box mb-4">
+            <input type="password" id="password" required />
+            <label for="password">Password</label>
+            <span class="password-icon">
+              <i class="bi-eye-slash-fill"></i>
+            </span>
+            <small class="invalid-msg">
+              Must be 8 - 20 alphanumeric with special characters.
+            </small>
+          </div>
+
+          <!-- Confirm Password Input -->
+          <div class="input-text-box mb-3">
+            <input type="password" id="confirm-password" required />
+            <label for="confirm-password">Confirm Password</label>
+            <span class="password-icon">
+              <i class="bi-eye-slash-fill"></i>
+            </span>
+            <small class="invalid-msg">
+              Passwords must match.
+            </small>
+          </div>
+
+          <!-- Terms & Conditions Checkbox -->
+          <div class="terms-conditions mb-4">
+            <label>
+              <input type="checkbox" required />
+              I agree to the&nbsp;
+              <a href="javascript:void(0);">Terms & Conditions</a>
+            </label>
+          </div>
+          
+          <!-- Register Button -->
+          <div class="mb-4">
+            <button class="register-btn" type="submit">
+              Register
+            </button>
+          </div>
+
+          <!-- Login Link -->
+          <div class="login-link">
+            Already have an account?
+            <a href="javascript:void(0);">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    
+    <!--jQuery Core 3.7.1 JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    </script>
+
+    <!-- JS -->
+    <script src="scripts/register.js"></script>
+  </body>
+</html>
