@@ -221,8 +221,13 @@
 
         function updateContent(selectedValue) {
             const selectedContent = content[selectedValue];
-
+        
             // Update Main Article
+            const mainArticle = mainArticleCard.querySelector(".article-title");
+            mainArticleCard.classList.remove("animate__fadeInUp"); // Reset animation
+            mainArticleCard.offsetWidth; // Trigger reflow to restart the animation
+            mainArticleCard.classList.add("animate__fadeInUp"); // Add animation class
+        
             mainArticleCard.querySelector(".article-title").innerText = selectedContent.main.title;
             mainArticleCard.querySelector(".article-date").innerText = selectedContent.main.date;
             mainArticleCard.querySelector(".article-description").innerText = selectedContent.main.description;
@@ -232,10 +237,10 @@
             
             // Update Sidebar Articles
             sidebarArticles.innerHTML = "";
-            selectedContent.sidebar.forEach(article => {
+            selectedContent.sidebar.forEach((article, index) => {
                 const sidebarArticle = `
                     <a href="${article.link}" target="_blank">
-                        <div class="sidebar-article">
+                        <div class="sidebar-article animate__animated animate__fadeInRight" data-wow-delay="${0.2 + (index * 0.1)}s">
                             <img src="${article.imgSrc}" class="img-fluid" alt="Sidebar Article Image">
                             <div class="sidebar-content">
                                 <p class="sidebar-category">${article.category}</p> 
@@ -247,7 +252,41 @@
                 `;
                 sidebarArticles.insertAdjacentHTML("beforeend", sidebarArticle);
             });
+            
+            // Trigger WOW.js re-init to apply the animations
+            new WOW().sync();
         }
+    });
+
+
+
+    // tipCards animation
+    document.addEventListener("DOMContentLoaded", function() {
+        const tipCards = document.querySelectorAll('.tipCard');
+        
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.style.transitionDelay = `${index * 0.2}s`; // Stagger the animation
+                    observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                }
+            });
+        }, observerOptions);
+        
+        tipCards.forEach(card => {
+            observer.observe(card);
+        });
+    });
+    
+
+
+    $(document).ready(function () {
+        new WOW().init();
     });
 
 })(jQuery);
