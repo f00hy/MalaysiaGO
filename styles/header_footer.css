@@ -142,3 +142,30 @@
     color: #fff; /* White text color on hover */
     border-color: #000; /* Ensure border remains black */
 }
+
+/* Back to top button */
+.back-to-top {
+    background-color: transparent; 
+    color: #808080; 
+    border: 2px solid #808080; 
+    border-radius: 10%; 
+    width: 40px; 
+    height: 40px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 1000; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.back-to-top i {
+    font-size: 16px; /* Icon size */
+}
+
+.back-to-top:hover {
+    background-color: #808080; 
+    color: white; 
+}
