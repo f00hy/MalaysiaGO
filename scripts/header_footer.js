@@ -78,3 +78,7 @@ function initNavbarBehavior() {
     });
 }
 
+$('.back-to-top').click(function() {
+    $('html, body').animate({scrollTop: 0}, 100);  // 800ms scroll duration
+    return false;
+});
