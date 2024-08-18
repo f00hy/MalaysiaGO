@@ -8,13 +8,13 @@ html {
 
 @media (max-width: 47em) {
   html {
-    font-size: 90%;
+    font-size: 85%;
   }
 }
 
 @media (max-width: 28em) {
   html {
-    font-size: 80%;
+    font-size: 70%;
   }
 }
 
@@ -52,7 +52,7 @@ a {
   cursor: pointer;
 }
 
-.login-register-form {
+.form-wrapper {
   background: white;
   width: 28em;
   padding: 3em 3em;
