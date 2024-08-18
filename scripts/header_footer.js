@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Ensure the placeholders exist
     const headerPlaceholder = document.getElementById('header-placeholder');
     const footerPlaceholder = document.getElementById('footer-placeholder');
-    
+
     if (headerPlaceholder && footerPlaceholder) {
         // Load header.html
         fetch('header.html')
@@ -10,16 +10,19 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(data => {
                 headerPlaceholder.innerHTML = data;
 
-                // Reinitialize Bootstrap components after loading the header
-                var scripts = document.createElement('script');
-                scripts.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js";
-                document.body.appendChild(scripts);
+                // Load Bootstrap JS after header is loaded
+                const script = document.createElement('script');
+                script.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js";
+                script.onload = () => {
+                    console.log("Bootstrap loaded");
 
-                // Initialize WOW.js after the header is loaded
-                new WOW().init();
+                    // Initialize WOW.js
+                    new WOW().init();
 
-                // Initialize navbar behavior after the header is loaded
-                initNavbarBehavior();
+                    // Initialize navbar behavior
+                    initNavbarBehavior();
+                };
+                document.body.appendChild(script);
             })
             .catch(error => console.error('Error loading header:', error));
 
@@ -78,7 +81,8 @@ function initNavbarBehavior() {
     });
 }
 
+// Ensure back-to-top button works
 $('.back-to-top').click(function() {
-    $('html, body').animate({scrollTop: 0}, 100);  // 800ms scroll duration
+    $('html, body').animate({scrollTop: 0}, 100);  // Smooth scroll to top
     return false;
 });

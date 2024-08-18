@@ -22,7 +22,8 @@
 }
 
 /* Solid background after scrolling past the video */
-.navbar.scrolled-past-video {
+.navbar.scrolled-past-video,
+.navbar.dropdown-active {
     background: #ffffff; /* Solid white background after scrolling */
 }
 
@@ -104,11 +105,13 @@ a.navbar-brand {
 }
 
 /* Ensure dropdown stays white when the navbar is scrolled past the video */
-.navbar.scrolled-past-video .navbar-nav .dropdown-menu {
+.navbar.scrolled-past-video .navbar-nav .dropdown-menu,
+.navbar.dropdown-active .navbar-nav .dropdown-menu {
     background-color: rgba(255, 255, 255, 1); /* Keep background white */
 }
 
-.navbar.scrolled-past-video .navbar-nav .dropdown-menu .dropdown-item {
+.navbar.scrolled-past-video .navbar-nav .dropdown-menu .dropdown-item,
+.navbar.dropdown-active .navbar-nav .dropdown-menu .dropdown-item {
     color: #000000; /* Keep text black */
 }
 
@@ -163,6 +166,50 @@ a.navbar-brand {
 }
 
 .navbar:not(.scrolled-past-video) .btn-login:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text color on hover */
+    border-color: #000; /* Ensure border remains black */
+}
+
+
+
+
+/* Custom styles for the Logout button */
+.navbar .btn-logout {
+    border: 1px solid #fff; /* White border by default */
+    color: #fff; /* White text by default */
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover state of the Logout button when hovering over the navbar */
+.navbar:hover .btn-logout {
+    border-color: #000; /* Black border color on navbar hover */
+    color: #000; /* Black text color on navbar hover */
+}
+
+/* Change the Logout button when hovered */
+.navbar .btn-logout:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text color on hover */
+    border-color: #000; /* Black border color on hover */
+}
+
+/* Change the Logout button to black when the navbar is scrolled past the video */
+.navbar.scrolled-past-video .btn-logout {
+    color: #000; /* Black text color */
+    border-color: #000; /* Black border color */
+    background-color: transparent; /* Ensure background remains transparent */
+}
+
+/* Change the Logout button on hover when scrolled past video */
+.navbar.scrolled-past-video .btn-logout:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text color on hover */
+    border-color: #000; /* Ensure border remains black on hover */
+}
+
+.navbar:not(.scrolled-past-video) .btn-logout:hover {
     background-color: #000; /* Black background on hover */
     color: #fff; /* White text color on hover */
     border-color: #000; /* Ensure border remains black */

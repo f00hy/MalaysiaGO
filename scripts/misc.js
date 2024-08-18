@@ -5,10 +5,14 @@ $(document).ready(function() {
         window.location.href = "index.html";
     });
 
+    console.log(checkLoginStatus());
+
     if (checkLoginStatus) {
         // display logout button
+        $(".btn-logout").show();
+      
     } else {
-        // display login button
+        
     }
 
     function checkLoginStatus() {
