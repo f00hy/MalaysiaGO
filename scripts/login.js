@@ -44,7 +44,7 @@ $(document).ready(function() {
     }
 
     function validatePassword(input) {
-        const pattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
+        const pattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&\.^\\/])[A-Za-z\d@$!%*?&\.^\\/]{8,20}$/;
         const isValid = pattern.test(input.val());
         input.toggleClass("invalid", !isValid).toggleClass("valid", isValid);
         return isValid;
@@ -59,7 +59,9 @@ $(document).ready(function() {
             expiryDate.setDate(expiryDate.getDate() + 30);
             document.cookie = `username=${username}; expires=${expiryDate.toUTCString()}; path=/;`;
         } else {
-            sessionStorage.setItem("username", username);
+            if (typeof Storage !== "undefined") {
+                sessionStorage.setItem("username", username);
+            }
         }
 
         window.location.href = "index.html";

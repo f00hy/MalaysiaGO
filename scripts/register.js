@@ -3,7 +3,7 @@ $(document).ready(function() {
     const patterns = {
         username: /^[a-zA-Z]{5,12}$/,
         email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-        password: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/
+        password: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&\.^\\/])[A-Za-z\d@$!%*?&\.^\\/]{8,20}$/
     };
 
     $(".input-text-box input").keyup(function() {
@@ -95,7 +95,9 @@ $(document).ready(function() {
         document.cookie = `username=${username}; expires=${expiryDate.toUTCString()}; path=/;`;
 
         users.push(username);
-        localStorage.setItem("users", JSON.stringify(users));
+        if (typeof Storage !== "undefined") {
+            localStorage.setItem("users", JSON.stringify(users));
+        }
 
         window.location.href = "index.html";
     }
