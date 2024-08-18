@@ -1,0 +1,31 @@
+div {
+  width: 1rem;
+}
+
+.loader {
+  position: fixed;
+  z-index: 1000;
+  background-color: lightcyan;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-gif {
+  position: absolute;
+  width: 25em;
+}
+
+@media (max-width: 47em) {
+  .loader-gif {
+    width: 19em;
+  }
+}
+
+@media (max-width: 28em) {
+  .loader-gif {
+    width: 14em;
+  }
+}

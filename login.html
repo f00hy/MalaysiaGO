@@ -4,7 +4,7 @@
   <head>
 
     <!-- Browser Tab -->
-    <title>Register for MalaysiaGO</title>
+    <title>Login to MalaysiaGO</title>
     <link rel="icon" href="assets/icons/logo.png" />
 
     <!-- Metadata -->
@@ -30,8 +30,8 @@
     <!-- Login and Register Form -->
     <div class="form-wrapper">
 
-      <!-- Register Form -->
-      <div class="register-form">
+      <!-- Login Form -->
+      <div class="login-form">
 
         <!-- Close Button -->
         <button class="close-btn">
@@ -39,7 +39,7 @@
         </button>
 
         <!-- Title -->
-        <h1 class="mb-4">REGISTER</h1>
+        <h1 class="mb-4">LOGIN</h1>
 
         <form method="post" action="javascript:void(0);" autocomplete="on" novalidate>
 
@@ -49,64 +49,42 @@
             <label for="username">Username</label>
             <i class="bi-person-fill"></i>
             <small class="invalid-msg">
-              Must be 5 - 12 alphabetic characters.
-            </small>
-          </div>
-
-          <!-- Email Input -->
-          <div class="input-text-box mb-4">
-            <input type="text" id="email" required />
-            <label for="email">Email</label>
-            <i class="bi-envelope-fill"></i>
-            <small class="invalid-msg">
-              Must be valid format: example@domain.com.
+              Invalid username. Try again or create a new account.
             </small>
           </div>
 
           <!-- Password Input -->
-          <div class="input-text-box mb-4">
+          <div class="input-text-box mb-3">
             <input type="password" id="password" required />
             <label for="password">Password</label>
             <span class="password-icon">
               <i class="bi-eye-slash-fill"></i>
             </span>
             <small class="invalid-msg">
-              Must be 8 - 20 alphanumeric with special characters.
+              Incorrect password. Try again or reset your password.
             </small>
           </div>
 
-          <!-- Confirm Password Input -->
-          <div class="input-text-box mb-3">
-            <input type="password" id="confirm-password" required />
-            <label for="confirm-password">Confirm Password</label>
-            <span class="password-icon">
-              <i class="bi-eye-slash-fill"></i>
-            </span>
-            <small class="invalid-msg">
-              Passwords must match.
-            </small>
-          </div>
-
-          <!-- Terms & Conditions Checkbox -->
-          <div class="terms-conditions mb-4">
+          <!-- Remember Me Checkbox & Forgot Password Link -->
+          <div class="remember-forgot mb-4">
             <label>
-              <input type="checkbox" required />
-              I agree to the&nbsp;
-              <a href="javascript:void(0);">Terms & Conditions</a>
+              <input type="checkbox" />
+              Remember me
             </label>
+            <a href="javascript:void(0);">Forgot password?</a>
           </div>
           
-          <!-- Register Button -->
+          <!-- Login Button -->
           <div class="mb-4">
-            <button class="register-btn" type="submit">
-              Register
+            <button class="login-btn" type="submit">
+              Login
             </button>
           </div>
 
-          <!-- Login Link -->
-          <div class="login-link">
-            Already have an account?
-            <a href="login.html">Login</a>
+          <!-- Register Link -->
+          <div class="register-link">
+            Don't have an account?
+            <a href="register.html">Register</a>
           </div>
         </form>
       </div>
@@ -123,6 +101,6 @@
     </script>
 
     <!-- JS -->
-    <script src="scripts/register.js"></script>
+    <script src="scripts/login.js"></script>
   </body>
 </html>

@@ -9,12 +9,11 @@ $(document).ready(function() {
     $(".input-text-box input").keyup(function() {
         const inputId = $(this).attr("id");
         if (inputId === "username") {
-            validateUsername();
+            validateUsername($(this));
         } else if (inputId === "confirm-password") {
-            validateConfirmPassword();
+            validateConfirmPassword($(this));
         } else {
-            const regex = patterns[inputId];
-            validateFormat($(this), regex);
+            validateFormat($(this), patterns[inputId]);
         }
     });
 
@@ -23,30 +22,28 @@ $(document).ready(function() {
 
         $(".input-text-box input").each(function() {
             const inputId = $(this).attr("id");
-            if (!["username", "confirm-password"].includes(inputId)) {
-                const regex = patterns[inputId];
-                if (!validateFormat($(this), regex)) {
+            if (inputId === "username") {
+                if (!validateUsername($(this))) {
+                    isValid = false;
+                }
+            } else if (inputId === "confirm-password") {
+                if (!validateConfirmPassword($(this))) {
+                    isValid = false;
+                }
+            } else {
+                if (!validateFormat($(this), patterns[inputId])) {
                     isValid = false;
                 }
             }
         });
 
-        if (!validateUsername()) {
-            isValid = false;
-        }
-
-        if (!validateConfirmPassword()) {
-            isValid = false;
-        }
-
         if (!validateTermsConditions()) {
             isValid = false;
         }
 
-        if (!isValid) {
-            e.preventDefault();
-        } else {
-            register(e);
+        e.preventDefault();
+        if (isValid) {
+            register();
         }
     });
 
@@ -57,37 +54,30 @@ $(document).ready(function() {
         $(this).toggleClass("bi-eye-slash-fill bi-eye-fill");
     });
 
-    function validateFormat(input, regex) {
-        const isValid = regex.test(input.val());
+    function validateFormat(input, pattern) {
+        const isValid = pattern.test(input.val());
         input.toggleClass("invalid", !isValid).toggleClass("valid", isValid);
         return isValid;
     }
 
-    function validateUsername() {
-        const username = $("#username").val();
-        const isValidPattern = patterns["username"].test(username);
-        const isDuplicate = users.includes(username);
+    function validateUsername(input) {
+        const username = input.val();
+        const isValid = patterns["username"].test(username) && !users.includes(username);
+        const invalidMsg = users.includes(username) ? 
+            "Username already exists. Please try another." : 
+            "Must be 5 - 12 alphabetic characters.";
+
+        input.siblings("small").text(invalidMsg);
+        input.toggleClass("invalid", !isValid).toggleClass("valid", isValid);
         
-        if (!isValidPattern || isDuplicate) {
-            $("#username").addClass("invalid").removeClass("valid");
-            if (isDuplicate) {
-                $("#username ~ small").text("Username already exists. Please try another.");
-            } else {
-                $("#username ~ small").text("Must be 5 - 12 alphabetic characters.");
-            }
-            return false;
-        } else {
-            $("#username").addClass("valid").removeClass("invalid");
-            return true;
-        }
+        return isValid;
     }
 
-    function validateConfirmPassword() {
+    function validateConfirmPassword(input) {
         const password = $("#password").val();
-        const confirmPassword = $("#confirm-password").val();
+        const confirmPassword = input.val();
         const isMatch = password === confirmPassword && password !== "";
-        $("#confirm-password").toggleClass("invalid", !isMatch)
-            .toggleClass("valid", isMatch);
+        input.toggleClass("invalid", !isMatch).toggleClass("valid", isMatch);
         return isMatch;
     }
 
@@ -98,29 +88,15 @@ $(document).ready(function() {
         return isChecked;
     }
 
-    function register(e) {
-        e.preventDefault();
-
+    function register() {
         const username = $("#username").val();
         const expiryDate = new Date();
         expiryDate.setDate(expiryDate.getDate() + 30);
         document.cookie = `username=${username}; expires=${expiryDate.toUTCString()}; path=/;`;
 
         users.push(username);
-        if (typeof Storage !== "undefined") {
-            localStorage.setItem("users", JSON.stringify(users));
-        }
-
-        console.log(getCookie("username"));
-        alert(getCookie("username"));
+        localStorage.setItem("users", JSON.stringify(users));
 
         window.location.href = "index.html";
-    }
-
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-        return null;
     }
 });
