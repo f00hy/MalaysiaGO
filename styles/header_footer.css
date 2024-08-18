@@ -115,6 +115,18 @@ a.navbar-brand {
     color: #000000; /* Keep text black */
 }
 
+.navbar.dropdown-active .btn-login {
+    color: #000; /* Black text color */
+    border-color: #000; /* Black border color */
+    background-color: transparent; /* Transparent background */
+}
+
+.navbar.dropdown-active .btn-logout {
+    color: #000; /* Black text color */
+    border-color: #000; /* Black border color */
+    background-color: transparent; /* Transparent background */
+}
+
 /* Toggler Icon (Hamburger Menu) */
 .navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -172,7 +184,11 @@ a.navbar-brand {
 }
 
 
-
+/* Navbar text color when the dropdown menu is active */
+.navbar.dropdown-active .navbar-nav .nav-link,
+.navbar.dropdown-active .navbar-brand {
+    color: #000000; /* Black text color */
+}
 
 /* Custom styles for the Logout button */
 .navbar .btn-logout {
