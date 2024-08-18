@@ -30,7 +30,7 @@
 /* Carousel Images */
 #attraction .carousel-inner img {
     width: 100%; /* Scale images to fit the container width */
-    height: auto; /* Maintain aspect ratio */
+    height: 450px; /* Fixed height for carousel images */
     object-fit: cover; /* Cover the carousel area */
 }
 
@@ -146,12 +146,6 @@ h2 {
     position: relative; /* Ensure the title stays in its flow */
 }
 
-/* Carousel Images */
-#attraction .carousel-inner img {
-    height: 450px;
-    object-fit: cover;
-}
-
 /* Ensure all cards in the section have the same height and padding */
 .card {
     display: flex;
@@ -162,7 +156,7 @@ h2 {
     transition: transform 0.3s ease;
     border: 1px solid #ddd;
     border-radius: 8px;
-    text-decoration: none;
+    text-decoration: none; /* Ensure no underlines */
 }
 
 .card:hover {
@@ -185,14 +179,14 @@ h2 {
 .card-title {
     font-weight: 700;
     margin-bottom: 10px;
-    text-decoration: none;
+    text-decoration: none; /* Ensure no underlines */
 }
 
 .card-text {
     font-weight: 400;
     color: #666;
     margin-bottom: 10px;
-    text-decoration: none;
+    text-decoration: none; /* Ensure no underlines */
 }
 
 .card-container {
@@ -209,4 +203,15 @@ h2 {
     .card img {
         height: auto;
     }
+}
+
+
+/* Remove underline from all links */
+a {
+    text-decoration: none;
+}
+
+/* Optional: Remove underline from links inside the card */
+.card-link {
+    text-decoration: none;
 }
