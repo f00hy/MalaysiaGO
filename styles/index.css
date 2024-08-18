@@ -152,7 +152,7 @@ h2 {
     object-fit: cover;
 }
 
-/* Ensure all cards in the "Things You Must Do" section have the same height and padding */
+/* Ensure all cards in the section have the same height and padding */
 .card {
     display: flex;
     flex-direction: column;
@@ -162,6 +162,7 @@ h2 {
     transition: transform 0.3s ease;
     border: 1px solid #ddd;
     border-radius: 8px;
+    text-decoration: none;
 }
 
 .card:hover {
@@ -184,12 +185,14 @@ h2 {
 .card-title {
     font-weight: 700;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .card-text {
     font-weight: 400;
     color: #666;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .card-container {
