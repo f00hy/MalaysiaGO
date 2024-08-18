@@ -2,12 +2,17 @@
 .navbar {
     background: rgba(255, 255, 255, 0); /* Start with a fully transparent background */
     transition: background 0.3s ease, color 0.3s ease;
-    z-index: 3;
+    z-index: 9999;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
 }
+
+
+
+
+
 
 
 /* Solid background when hovered */
@@ -22,7 +27,7 @@
 }
 
 .navbar.scrolled-past-video .navbar-nav .nav-link,
-.navbar.scrolled-past-video .navbar-brand .ms-2 {
+.navbar.scrolled-past-video .navbar-brand  {
     color: #000000; /* Black text color */
 }
 
@@ -32,7 +37,7 @@
 }
 
 /* Default Navbar Text Styling */
-.navbar-brand .ms-2 {
+.navbar-brand {
     color: #ffffff; /* Default color: white */
     font-size: 1.3rem;
     font-weight: bold;
@@ -57,6 +62,26 @@
 .navbar:hover .navbar-nav .nav-link {
     color: #000000; /* Hover color: black */
 }
+
+/* Navbar text color when scrolled past video */
+.navbar.scrolled-past-video .navbar-brand {
+    color: #000000; /* Black text color */
+}
+
+/* Hover state for navbar text */
+.navbar:hover .navbar-brand {
+    color: #000000; /* Hover color: black */
+}
+
+/* Ensure styling for the link in .navbar-brand */
+a.navbar-brand {
+    text-decoration: none; /* Remove underline from link */
+}
+
+
+
+
+
 
 /* Dropdown Menu Styling */
 .navbar-dark .navbar-nav .dropdown-menu {

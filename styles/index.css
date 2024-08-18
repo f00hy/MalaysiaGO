@@ -1,24 +1,53 @@
-
 /* Neighbourhoods Section Image Styling */
 #neighbourhoodsCarousel .carousel-inner img {
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+/* Carousel Container */
+#neighbourhoodsCarousel {
+    max-width: 80%; /* Adjust this value to control overall width */
+    margin: 0 auto; /* Center the carousel horizontally */
+    padding: 0 20px; /* Add padding on the sides */
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 10px; /* Rounded corners for the carousel container */
+    position: relative; /* Ensure it's positioned relative for absolute children */
+    overflow: visible; /* Make sure overflow is visible to show overlapping buttons */
+    margin-bottom: 30px; /* Add margin to the bottom */
+}
+
+/* Carousel Inner */
+.carousel-inner {
+    width: 100%; /* Ensure the inner container is responsive */
+    height: auto; /* Adjust height as needed */
+}
+
+/* Carousel Item */
+.carousel-item {
+    height: auto; /* Ensure the carousel item height adjusts automatically */
+}
+
+/* Carousel Images */
+.carousel-inner img {
+    width: 100%; /* Scale images to fit the container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the carousel area */
+}
+
 /* Style the carousel control buttons */
 #neighbourhoodsCarousel .carousel-control-prev,
 #neighbourhoodsCarousel .carousel-control-next {
-    width: 40px; /* Set width */
-    height: 40px; /* Set height */
-    top: 40%; /* Position higher relative to the carousel height */
-    transform: translateY(-50%); /* Adjust for centering */
+    width: 50px; /* Increase width */
+    height: 50px; /* Increase height */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
     background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
     border-radius: 50%; /* Make them circular */
     border: 1px solid #ccc; /* Optional: Add a subtle border */
     display: flex; /* Flexbox to center the arrow inside */
     justify-content: center;
     align-items: center;
-    z-index: 5; /* Ensure they are above the carousel content */
+    z-index: 10; /* Ensure they are above the carousel content */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
@@ -34,7 +63,7 @@
     border: solid #000; /* Black arrow color */
     border-width: 0 3px 3px 0;
     display: inline-block;
-    padding: 5px;
+    padding: 6px; /* Adjust padding */
 }
 
 #neighbourhoodsCarousel .carousel-control-prev-icon {
@@ -45,14 +74,14 @@
     transform: rotate(-45deg); /* Create the right arrow */
 }
 
-/* Position the previous button slightly left of the carousel */
+/* Position the previous button outside the carousel */
 #neighbourhoodsCarousel .carousel-control-prev {
-    left: -20px; /* Adjust to move the button slightly outside the carousel */
+    left: -25px; /* Move the button outside the carousel */
 }
 
-/* Position the next button slightly right of the carousel */
+/* Position the next button outside the carousel */
 #neighbourhoodsCarousel .carousel-control-next {
-    right: -20px; /* Adjust to move the button slightly outside the carousel */
+    right: -25px; /* Move the button outside the carousel */
 }
 
 /* Pretty Carousel Indicators Styling */
@@ -93,6 +122,9 @@
     margin-top: 15px; /* To maintain consistent spacing */
 }
 
+
+
+
 /* Button Hover Effect */
 .view-all-btn:hover, .btn-primary:hover {
     background-color: #007bff; /* Blue background on hover */
@@ -112,6 +144,9 @@ h2 {
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     opacity: 1; /* Ensure the title is visible */
     transform: translateY(0); /* No unwanted vertical shift */
+    text-align: center; /* Center-align the title */
+    z-index: 10; /* Ensure the title is above other content */
+    position: relative; /* Ensure the title stays in its flow */
 }
 
 /* Carousel Images */
@@ -166,6 +201,7 @@ h2 {
     gap: 20px;
 }
 
+
 @media (max-width: 768px) {
     .card {
         padding: 15px;
@@ -174,4 +210,19 @@ h2 {
     .card img {
         height: auto;
     }
+}
+
+.card-link {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Ensure text color remains the same */
+}
+
+.card {
+    transition: transform 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card-link:hover .card {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
 }
