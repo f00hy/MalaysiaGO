@@ -2,12 +2,17 @@
 .navbar {
     background: rgba(255, 255, 255, 0); /* Start with a fully transparent background */
     transition: background 0.3s ease, color 0.3s ease;
-    z-index: 3;
+    z-index: 9999;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
 }
+
+
+
+
+
 
 
 /* Solid background when hovered */
@@ -17,12 +22,13 @@
 }
 
 /* Solid background after scrolling past the video */
-.navbar.scrolled-past-video {
+.navbar.scrolled-past-video,
+.navbar.dropdown-active {
     background: #ffffff; /* Solid white background after scrolling */
 }
 
 .navbar.scrolled-past-video .navbar-nav .nav-link,
-.navbar.scrolled-past-video .navbar-brand .ms-2 {
+.navbar.scrolled-past-video .navbar-brand  {
     color: #000000; /* Black text color */
 }
 
@@ -32,7 +38,7 @@
 }
 
 /* Default Navbar Text Styling */
-.navbar-brand .ms-2 {
+.navbar-brand {
     color: #ffffff; /* Default color: white */
     font-size: 1.3rem;
     font-weight: bold;
@@ -58,6 +64,26 @@
     color: #000000; /* Hover color: black */
 }
 
+/* Navbar text color when scrolled past video */
+.navbar.scrolled-past-video .navbar-brand {
+    color: #000000; /* Black text color */
+}
+
+/* Hover state for navbar text */
+.navbar:hover .navbar-brand {
+    color: #000000; /* Hover color: black */
+}
+
+/* Ensure styling for the link in .navbar-brand */
+a.navbar-brand {
+    text-decoration: none; /* Remove underline from link */
+}
+
+
+
+
+
+
 /* Dropdown Menu Styling */
 .navbar-dark .navbar-nav .dropdown-menu {
     background-color: rgba(255, 255, 255, 1); /* White background for the dropdown */
@@ -79,12 +105,26 @@
 }
 
 /* Ensure dropdown stays white when the navbar is scrolled past the video */
-.navbar.scrolled-past-video .navbar-nav .dropdown-menu {
+.navbar.scrolled-past-video .navbar-nav .dropdown-menu,
+.navbar.dropdown-active .navbar-nav .dropdown-menu {
     background-color: rgba(255, 255, 255, 1); /* Keep background white */
 }
 
-.navbar.scrolled-past-video .navbar-nav .dropdown-menu .dropdown-item {
+.navbar.scrolled-past-video .navbar-nav .dropdown-menu .dropdown-item,
+.navbar.dropdown-active .navbar-nav .dropdown-menu .dropdown-item {
     color: #000000; /* Keep text black */
+}
+
+.navbar.dropdown-active .btn-login {
+    color: #000; /* Black text color */
+    border-color: #000; /* Black border color */
+    background-color: transparent; /* Transparent background */
+}
+
+.navbar.dropdown-active .btn-logout {
+    color: #000; /* Black text color */
+    border-color: #000; /* Black border color */
+    background-color: transparent; /* Transparent background */
 }
 
 /* Toggler Icon (Hamburger Menu) */
@@ -138,6 +178,54 @@
 }
 
 .navbar:not(.scrolled-past-video) .btn-login:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text color on hover */
+    border-color: #000; /* Ensure border remains black */
+}
+
+
+/* Navbar text color when the dropdown menu is active */
+.navbar.dropdown-active .navbar-nav .nav-link,
+.navbar.dropdown-active .navbar-brand {
+    color: #000000; /* Black text color */
+}
+
+/* Custom styles for the Logout button */
+.navbar .btn-logout {
+    border: 1px solid #fff; /* White border by default */
+    color: #fff; /* White text by default */
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover state of the Logout button when hovering over the navbar */
+.navbar:hover .btn-logout {
+    border-color: #000; /* Black border color on navbar hover */
+    color: #000; /* Black text color on navbar hover */
+}
+
+/* Change the Logout button when hovered */
+.navbar .btn-logout:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text color on hover */
+    border-color: #000; /* Black border color on hover */
+}
+
+/* Change the Logout button to black when the navbar is scrolled past the video */
+.navbar.scrolled-past-video .btn-logout {
+    color: #000; /* Black text color */
+    border-color: #000; /* Black border color */
+    background-color: transparent; /* Ensure background remains transparent */
+}
+
+/* Change the Logout button on hover when scrolled past video */
+.navbar.scrolled-past-video .btn-logout:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text color on hover */
+    border-color: #000; /* Ensure border remains black on hover */
+}
+
+.navbar:not(.scrolled-past-video) .btn-logout:hover {
     background-color: #000; /* Black background on hover */
     color: #fff; /* White text color on hover */
     border-color: #000; /* Ensure border remains black */

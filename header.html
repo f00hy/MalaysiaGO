@@ -1,32 +1,45 @@
 <header>
+    
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-visible">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="/assets/icons/logo.png" alt="MalaysiaGO Logo" style="height: 30px; width: auto;" class="navbar-logo">
                 <span class="ms-2">Visit Malaysia</span>
             </a>
+
+            <!-- Toggler/collapsible Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">What's Happening</a>
+                        <a class="nav-link" href="index.html#mustVisit">Must-Visit</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Neighbourhoods</a>
+                        <a class="nav-link" href="index.html#whatsHappening">What's Happening</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Things To Do</a>
+                        <a class="nav-link" href="index.html#attraction">Attractions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="travelTips.html">Travel Guide</a>
+                        <a class="nav-link" href="travelGuide.html">Travel Guide</a>
                     </li>
+                    <li class="nav-item">
+                        <li><a class="nav-link" href="navmap.html">Map</a></li>
+                    </li>
+                    
                     <!-- Login Button -->
                     <li class="nav-item">
-                        <a class="btn btn-outline-light ms-2 btn-login" href="#" role="button">Login</a>
+                        <a class="btn btn-outline-light ms-2 btn-login" id="login-button" href="login.html" role="button">Login</a>
+                        <a class="btn btn-light ms-2 btn-logout" id="logout-button" href="#" role="button" style="display: none;">Logout</a>
 
+                        <!-- Logout Button - Uncomment if needed -->
+                        <!-- <a class="btn btn-outline-light ms-2 btn-logout" href="#" role="button" style="display:none;">Logout</a> -->
                     </li>
                 </ul>
             </div>

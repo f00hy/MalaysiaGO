@@ -20,6 +20,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 // Initialize navbar behavior after the header is loaded
                 initNavbarBehavior();
+
+                // Call the function to handle login/logout button visibility
+                handleLoginLogoutButtons(); // This function will be in misc.js
+
+                // Reinitialize Bootstrap components after loading the header
+                var scripts = document.createElement('script');
+                scripts.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js";
+                document.body.appendChild(scripts);
             })
             .catch(error => console.error('Error loading header:', error));
 
@@ -34,6 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error('Header or footer placeholders not found');
     }
 });
+
+function handleLoginLogoutButtons() {
+    // This function will be in misc.js and should be invoked here
+}
 
 // Function to initialize the navbar behavior
 function initNavbarBehavior() {
