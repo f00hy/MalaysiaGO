@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Putrajaya - Tourism Paradise</title>
+    <!-- Google Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS Link -->
+    <link href="/styles/state_styles.css" rel="stylesheet">
+    <link href="/styles/header_footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/spinner.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>    
+    <!-- Spinner End -->
+    
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <!-- Header -->
+        <div id="header-placeholder"></div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Hero Section with Video Background -->
+            <section id="hero" class="hero text-center d-flex align-items-center justify-content-center">
+                <video autoplay muted loop id="heroVideo" class="w-100">
+                    <source src="video/putrajaya.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hero-content text-black position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                    <a href="#places" class="btn btn-primary btn-lg">Explore Now</a>
+                </div>
+            </section>
+
+            <!-- About Putrajaya Section -->
+            <section id="about" class="about-section py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-4">About Putrajaya</h2>
+                    <p>Putrajaya, Malaysia's federal administrative center, is a modern city renowned for its stunning architecture, expansive green spaces, and serene lakes. Known as the "Intelligent Garden City," Putrajaya is the epitome of urban planning, blending governmental functions with a high quality of life.</p>
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"Putrajaya is a symbol of Malaysia's vision for the future, where progress meets nature."</p>
+                        <br><footer class="blockquote-footer">Urban Planning Specialist <cite title="Source Title">Jane Smith</cite></footer><br>
+                    </blockquote>
+                    <p>From the iconic Putra Mosque to the expansive Putrajaya Botanical Gardens, this city offers visitors a unique experience of modern Malaysia, where tradition meets innovation. Its well-planned landscapes and futuristic buildings make it a must-visit destination for architecture enthusiasts and nature lovers alike.</p>
+                </div>
+            </section>
+
+           <!-- Featured Places Section -->
+            <section id="places" class="places-section py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">Featured Tourism Places</h2>
+                    <div class="row g-4">
+                        <!-- Place 1: Putra Mosque -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card place fixed-size-card">
+                                <img src="images/putrajaya/putra-mosque.jpg" class="card-img-top" alt="Putra Mosque">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Putra Mosque</h5>
+                                    <p class="card-text">The Putra Mosque is one of Putrajaya's most iconic landmarks. With its pink dome and intricate design, this mosque is a perfect blend of modern architecture and traditional Islamic arts.</p>
+                                    <a href="https://www.malaysia-traveller.com/putra-mosque.html" class="btn btn-primary mt-auto" target="_blank">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Place 2: Putrajaya Lake and Bridge -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card place fixed-size-card">
+                                <img src="images/putrajaya/lake-bridge.jpg" class="card-img-top" alt="Putrajaya Lake and Bridge">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Putrajaya Lake and Bridge</h5>
+                                    <p class="card-text">Experience the beauty of Putrajaya by taking a boat cruise on Putrajaya Lake. The lake is surrounded by iconic bridges like the Seri Wawasan Bridge, offering stunning views of the city’s skyline.</p>
+                                    <a href="https://abckualalumpur.com/info_guide/putrajaya3.html" class="btn btn-primary mt-auto" target="_blank">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Place 3: Putrajaya Botanical Gardens -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card place fixed-size-card">
+                                <img src="images/putrajaya/botanical-gardens.jpg" class="card-img-top" alt="Putrajaya Botanical Gardens">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Putrajaya Botanical Gardens</h5>
+                                    <p class="card-text">VA paradise for nature lovers, the Putrajaya Botanical Gardens feature a vast array of flora from around the world, themed gardens, and scenic walking trails.</p>
+                                    <a href="https://www.malaysia-traveller.com/putrajaya-botanical-gardens.html" class="btn btn-primary mt-auto" target="_blank">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Place 4: Perdana Putra -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card place fixed-size-card">
+                                <img src="images/putrajaya/perdana-putra.jpg" class="card-img-top" alt="Perdana Putra">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Perdana Putra</h5>
+                                    <p class="card-text">The Perdana Putra complex houses the offices of the Prime Minister of Malaysia. Its impressive architecture and location atop a hill make it a prominent feature of Putrajaya's skyline.</p>
+                                    <a href="https://www.malaysia-traveller.com/perdana-putra.html" class="btn btn-primary mt-auto" target="_blank">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Place 5: Putrajaya International Convention Centre (PICC) -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card place fixed-size-card">
+                                <img src="images/putrajaya/picc.jpg" class="card-img-top" alt="Putrajaya International Convention Centre">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Putrajaya International Convention Centre (PICC)</h5>
+                                    <p class="card-text">PICC is Malaysia's premier conference and event venue. Its unique design and state-of-the-art facilities make it a key location for international events.</p>
+                                    <a href="https://www.picc.com.my/facilities" class="btn btn-primary mt-auto" target="_blank">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Place 6: Millennium Monument -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card place fixed-size-card">
+                                <img src="images/putrajaya/monument.jpg" class="card-img-top" alt="Millennium Monument">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Millennium Monument</h5>
+                                    <p class="card-text">The Millennium Monument is a futuristic obelisk that symbolizes Malaysia's aspirations for the future. It offers panoramic views of Putrajaya from its observation deck.</p>
+                                    <a href="https://gokayu.com/malaysia/putrajaya/attraction/millennium-monument-putrajaya" class="btn btn-primary mt-auto" target="_blank">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Gallery Section -->
+            <section id="gallery" class="gallery-section py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-5">Explore Putrajaya through Pictures</h2>
+                    <div class="gallery-container">
+                        <div class="gallery-scroll">
+                            <img src="images/putrajaya/putra-mosque.jpg" class="img-fluid gallery-image" alt="Putra Mosque">
+                            <img src="images/putrajaya/lake-bridge.jpg" class="img-fluid gallery-image" alt="Putrajaya Lake and Bridge">
+                            <img src="images/putrajaya/botanical-gardens.jpg" class="img-fluid gallery-image" alt="Putrajaya Botanical Gardens">
+                            <img src="images/putrajaya/perdana-putra.jpg" class="img-fluid gallery-image" alt="Perdana Putra">
+                            <img src="images/putrajaya/picc.jpg" class="img-fluid gallery-image" alt="Putrajaya International Convention Centre">
+                            <img src="images/putrajaya/monument.jpg" class="img-fluid gallery-image" alt="Millennium Monument">
+                            <!-- Duplicate images to ensure infinite scrolling without gaps -->
+                            <img src="images/putrajaya/putra-mosque.jpg" class="img-fluid gallery-image" alt="Putra Mosque">
+                            <img src="images/putrajaya/lake-bridge.jpg" class="img-fluid gallery-image" alt="Putrajaya Lake and Bridge">
+                            <img src="images/putrajaya/botanical-gardens.jpg" class="img-fluid gallery-image" alt="Putrajaya Botanical Gardens">
+                            <img src="images/putrajaya/perdana-putra.jpg" class="img-fluid gallery-image" alt="Perdana Putra">
+                            <img src="images/putrajaya/picc.jpg" class="img-fluid gallery-image" alt="Putrajaya International Convention Centre">
+                            <img src="images/putrajaya/monument.jpg" class="img-fluid gallery-image" alt="Millennium Monument">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+        <!-- Footer -->
+        <div id="footer-placeholder"></div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/scripts/header_footer.js"></script>
+    <script src="scripts/misc.js"></script>
+    <script src="scripts/spinner.js"></script>
+</body>
+
+</html>
