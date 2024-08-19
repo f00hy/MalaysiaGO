@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    if (checkLoginStatus()) {
+        window.location.href = "index.html";
+    }
+
     const users = JSON.parse(localStorage.getItem("users")) || [];
     const patterns = {
         username: /^[a-zA-Z]{5,12}$/,
@@ -104,5 +108,24 @@ $(document).ready(function() {
         }
 
         window.location.href = "index.html";
+    }
+
+    function checkLoginStatus() {
+        const username = sessionStorage.getItem("username");
+        
+        if (username) {
+            return username;
+        }
+
+        const cookies = document.cookie.split("; ");
+        for (let i = 0; i < cookies.length; i++) {
+            const cookiePair = cookies[i].split("=");
+            if (cookiePair[0] === "username") {
+               
+                return cookiePair[1];
+            }
+        }
+
+        return null;
     }
 });
