@@ -14,20 +14,36 @@
     <meta name="author" content="Beh Jun Yue, Foo Yao Heng, Lee Shao Yuan, Yong Kai Wen" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  
+    <link rel="stylesheet" href="styles/header_footer.css">
+    <link rel="stylesheet" href="styles/spinner.css">
   </head>
   
   <body>
-    
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+          <span class="sr-only">Loading...</span>
+      </div>
+    </div>    
+    <!-- Spinner End -->
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
     <!-- Map -->
     <div class="map-wrapper">
       <div id="map"></div>
     </div>
 
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
     <!-- JS -->
     <script src="scripts/map/mapdata.js"></script>
     <script src="scripts/map/countrymap.js"></script>
+    <script src="scripts/header_footer.js"></script>
+    <script src="scripts/misc.js"></script>
+    <script src="scripts/spinner.js"></script>
  
   </body>
 </html>
