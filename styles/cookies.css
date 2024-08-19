@@ -1,0 +1,84 @@
+/* Google Font Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+button,
+a {
+  cursor: pointer;
+}
+
+.cookies-wrapper {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: 21.5em;
+  padding: 1em;
+  background-color: white;
+  color: black;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8em;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 28em) {
+  .cookies-wrapper {
+    width: auto;
+    left: 1em;
+  }
+}
+
+.cookies-wrapper .close-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0.3em;
+  right: 0.3em;
+  width: 1.2em;
+  height: 1.2em;
+  border: none;
+  color: #333333;
+  opacity: 0.6;
+  background-color: transparent;
+  font-size: 1.5em;
+  border-radius: 0.75em;
+  padding-top: 0.1em;
+  transition: all 0.15s;
+}
+
+.cookies-wrapper .close-btn:hover {
+  opacity: 1;
+  color: black;
+}
+
+.cookies-wrapper .close-btn:active {
+  opacity: 0.8;
+  color: black;
+}
+
+.cookies-text {
+  margin: 0;
+  text-align: justify;
+  padding-top: 1em;
+  padding-right: 1em;
+}
+
+.cookies-text a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.cookies-text a:hover {
+  text-decoration: underline;
+}
+
+.cookies-text a:active {
+  color: blue;
+}
