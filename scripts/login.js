@@ -37,6 +37,10 @@ $(document).ready(function() {
         $(this).toggleClass("bi-eye-slash-fill bi-eye-fill");
     });
 
+    $(".login-form .close-btn").click(function() {
+        window.location.href = "index.html";
+    });
+
     function validateUsername(input) {
         const isValid = users.includes(input.val());
         input.toggleClass("invalid", !isValid).toggleClass("valid", isValid);

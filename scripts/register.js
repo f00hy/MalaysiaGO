@@ -54,6 +54,10 @@ $(document).ready(function() {
         $(this).toggleClass("bi-eye-slash-fill bi-eye-fill");
     });
 
+    $(".login-form .close-btn").click(function() {
+        window.location.href = "index.html";
+    });
+
     function validateFormat(input, pattern) {
         const isValid = pattern.test(input.val());
         input.toggleClass("invalid", !isValid).toggleClass("valid", isValid);
